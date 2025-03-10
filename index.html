@@ -5,6 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Recipes</title>
     <link rel="stylesheet" href="./css/style.css">
+<style>
+    .flex-container {
+        display: flex;
+        background-color: DodgerBlue;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .flex-container > div {
+        background-color: darkgray;
+        margin: 10px;
+        padding: 20px;
+        font-size: 30px;
+        flex:1 1 0;
+        text-align: left;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    /* use media queries to create different layouts for different screen sizes and devices. */
+    @media (max-width: 800px) {
+        .flex-container{
+            flex-direction: column;
+            flex: 100%;
+        }
+    }
+
+</style>
 </head>
 <body style="background-image: url(./images/fantastic_food.jpg);">
     <div><h1>Odin Recipes<sup style="font-size:20px;">TM</sup></h1></div>
@@ -20,6 +47,19 @@
 
     </ul>
     <span class="box-1"><h4>For more recipes, <span> <a href="/contactus.html"> <mark style="background-color:darkorange;">contact us</mark></a> </span></h4></span>
-        
+    
+    /* Flex */
+    <div class="flex-container">
+        <div style="order: 2; flex-grow: 2;">
+            About us:
+            <li>High quality coding education </li>
+            <li>Maintained by an open source community.</li>
+        </div>
+        <div style="order: 1; flex-grow: 1;">Locations:
+            <li>USA</li>
+            <li>Europe</li>
+            <li>India</li>
+        </div>
+    </div>   
 </body>
 </html>
